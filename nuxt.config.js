@@ -1,5 +1,13 @@
 import colors from 'vuetify/es5/util/colors'
 
+const pcAbTestFlag = true
+const spAbTestFlag = true
+
+const pcTel = '0120-111-111'
+const pcbTel = '0120-222-222'
+const spTel = '0120-333-333'
+const spbTel = '0120-444-444'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -37,7 +45,10 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: [
+    // https://github.com/nuxt-community/dotenv-module
+    '@nuxtjs/dotenv',
+  ],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
@@ -60,4 +71,14 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // dotenv value
+  env: {
+    pcAbTestFlag,
+    spAbTestFlag,
+    pcTel,
+    pcbTel,
+    spTel,
+    spbTel,
+  },
 }
