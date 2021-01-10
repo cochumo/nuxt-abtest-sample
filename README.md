@@ -1,5 +1,12 @@
 # nuxt-abtest-sample
 
+Nuxt.jsでABテストを実装したサンプル
+
+## 概要
+
+Nuxt.jsでABテストと調べるとGoogle Optimizeの記事しか見つからなくて<br>
+vue-a2bというVueのモジュールでパターン算出してVuexで管理している
+
 ## Build Setup
 
 ```bash
