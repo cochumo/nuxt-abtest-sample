@@ -4,6 +4,12 @@
       <div class="text-center">
         <logo />
         <vuetify-logo />
+        <div>
+          <p>PcPattern: {{ $store.getters['ab-test/getPcPattern'] }}</p>
+          <p>SpPattern: {{ $store.getters['ab-test/getSpPattern'] }}</p>
+          <p>PcTelNumber: {{ $store.getters['ab-test/getPcTelNumber'] }}</p>
+          <p>SpTelNumber: {{ $store.getters['ab-test/getSpTelNumber'] }}</p>
+        </div>
       </div>
       <v-card>
         <v-card-title class="headline">
