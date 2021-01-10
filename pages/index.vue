@@ -4,11 +4,29 @@
       <div class="text-center">
         <logo />
         <vuetify-logo />
-        <div>
-          <p>PcPattern: {{ $store.getters['ab-test/getPcPattern'] }}</p>
-          <p>SpPattern: {{ $store.getters['ab-test/getSpPattern'] }}</p>
-          <p>PcTelNumber: {{ $store.getters['ab-test/getPcTelNumber'] }}</p>
-          <p>SpTelNumber: {{ $store.getters['ab-test/getSpTelNumber'] }}</p>
+      </div>
+      <div class="mb-4">
+        <div class="text-center">
+          <v-skeleton-loader
+            v-if="$store.getters['ab-test/getPcPattern'] === ''"
+            v-bind="attrs"
+            type="list-item-two-line"
+          ></v-skeleton-loader>
+          <div v-else>
+            <p>PcPattern: {{ $store.getters['ab-test/getPcPattern'] }}</p>
+            <p>PcTelNumber: {{ $store.getters['ab-test/getPcTelNumber'] }}</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <v-skeleton-loader
+            v-if="$store.getters['ab-test/getSpPattern'] === ''"
+            v-bind="attrs"
+            type="list-item-two-line"
+          ></v-skeleton-loader>
+          <div v-else>
+            <p>SpPattern: {{ $store.getters['ab-test/getSpPattern'] }}</p>
+            <p>SpTelNumber: {{ $store.getters['ab-test/getSpTelNumber'] }}</p>
+          </div>
         </div>
       </div>
       <v-card>
@@ -97,6 +115,15 @@ export default {
   components: {
     Logo,
     VuetifyLogo,
+  },
+  data() {
+    return {
+      attrs: {
+        class: 'flex justify-center',
+        boilerplate: true,
+        elevation: 2,
+      },
+    }
   },
 }
 </script>
