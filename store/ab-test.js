@@ -1,8 +1,8 @@
 export const state = () => ({
   isPcTestWorking: process.env.pcAbTestFlag,
   isSpTestWorking: process.env.spAbTestFlag,
-  pcAbTestPattern: 'A',
-  spAbTestPattern: 'A',
+  pcAbTestPattern: '',
+  spAbTestPattern: '',
 })
 
 export const getters = {
